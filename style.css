@@ -229,7 +229,7 @@ body {
     display: flex;
     gap: 1rem;
     max-width: 1000px;
-    height: 70%;
+    height: 50%;
   }
   .header {
     height: 100%;
@@ -253,7 +253,6 @@ body {
   .task_container {
     max-width: 200px;
     height: 70%;
-    margin-bottom: 9rem;
   }
   .task__top {
     height: 40%;
