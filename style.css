@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* # Font */
+  --font_family : "Rubik", sans-serif;
+  --card_title_font_size : 1.125rem;
+  --italic_font : 300;
+  --regular_weight : 400;
+  --medium_weight : 500;
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+
+  --Light_orange: hsl(15, 100%, 70%); /* work */
+  --Soft_blue : hsl(195, 74%, 62%); /* play */
+  --Light_red : hsl(348, 100%, 68%); /* study */
+  --Lime_green : hsl(145, 58%, 55%); /* exercise */
+  --Violet : hsl(264, 64%, 52%); /* social */
+  --Soft_orange : hsl(43, 84%, 65%); /* care */
+
+  /* ### Neutral */
+
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(235, 45%, 61%);
+  --Pale_Blue: hsl(236, 100%, 87%);
+}
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* document styling */
+body {
+  min-height: 100vh;
+  background-color: var(--Very_dark_blue);
+  padding: 1.25rem;
+  font-family: var(--font_family);
+  color: #fff;
+}
+
+.user_icon {
+  width: 70px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.header {
+  width: 100%;
+  max-width: 325px;
+  margin: 0 auto;
+  background-color: var(--Dark_blue);
+  border-radius: .75rem;
+}
+
+.header__top,
+.header__top div,
+.header__nav {
+  display: flex;
+  padding: 1.25rem;
+}
+
+.header__top {
+  background-color: var(--Blue);
+  border-radius: .75rem .75rem 0 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__top  p {
+  opacity: 50%;
+}
+.header__top div {
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.user_name {
+  opacity: 90%;
+  font-size: 1.375rem;
+  font-weight: var(--regular_weight);
+}
+
+.header__nav{
+  padding: 1.25rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--Pale_Blue);
+  font-size: 1.25rem;
+  opacity: 70%;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.current_link {
+  color: white;
+}
+
+.main {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 800px;
+}
+
+.task_container {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 500ms ease-in-out;
+}
+
+.task_container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.task__top {
+  position: relative;
+  border-radius: .75rem .75rem 0 0;
+  padding: .25rem;
+  margin-bottom: 4rem;
+  height: 60%;
+}
+
+.task__top .icon {
+  margin-left: auto;
+  position: absolute;
+  right: 5%;
+  top: -10%;
+  clip-path: inset(7% 0 0 0);
+}
+
+.task__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  border-radius: .75rem;
+  background-color: var(--Dark_blue);
+  padding: 1.25rem;
+  line-height: 1.5;
+  font-size: var(--card_title_font_size);
+}
+
+.task_time {
+  font-weight: var(--regular_weight);
+  opacity: 70%;
+}
+
+.task_right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: .875rem;
+  opacity: 70%;
+}
+
+.task_right .btn {
+  align-self: flex-end;
+  background: transparent;
+  text-align: right;
+  border: none;
+  outline: none;
+}
+
+.work {
+  background-color: var(--Light_orange);
+}
+
+.play {
+  background-color: var(--Soft_blue);
+}
+
+.study {
+  background-color: var(--Light_red);
+}
+
+.exercise {
+  background-color: var(--Lime_green);
+}
+
+.exercise .icon {
+  clip-path: inset(11% 0 0 0);
+}
+
+.social {
+  background-color: var(--Violet);
+}
+
+.self_care {
+  background-color: var(--Soft_orange);
+}
+
+.self_care .icon {
+  clip-path: inset(11% 0 0 0);
+}
+
+@media (min-width : 800px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_container {
+    display: flex;
+    gap: 1rem;
+    max-width: 1000px;
+    height: 70%;
+  }
+  .header {
+    height: 100%;
+    max-width: 250px;
+  }
+  .header__top {
+    height: 60%;
+    border-radius: .75rem;
+  }
+  .header__top div {
+    padding: 0;
+  }
+  .user_name {
+    font-size: 2rem;
+  }
+  .main {
+    margin-top: 0;
+    grid-template-columns: repeat(3, 200px);
+    gap: 1rem;
+  }
+  .task_container {
+    max-width: 200px;
+    height: 60%;
+    margin-bottom: 10rem;
+  }
+  .task__top {
+    height: 40%;
+  }
+  .task__content {
+    top: 30%;
+  }
+  .header__top,
+  .header__nav,
+  .task__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .task__top .icon {
+    clip-path: inset(9% 0 0 0);
+  }
+  .exercise .icon {
+    clip-path: inset(12% 0 0 0);
+  }
+  .task_time {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+  .task_right .btn {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+  }
+}

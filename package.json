@@ -1,0 +1,12 @@
+{
+  "name": "frontend-mentor-time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "This is a solution to the Time tracking dashboard challenge on Frontend Mentor",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
